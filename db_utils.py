@@ -2,6 +2,13 @@ import psycopg2 as psq
 
 
 def create_tables_if_not_exist(db_config):
+    """
+    This function checks the existence of tables in the database and creates them if not.
+
+    :param db_config: Configuration dictionary for connecting to PostgreSQL.
+    :type db_config: dict
+    """
+
     conn = psq.connect(**db_config)
     cursor = conn.cursor()
 
