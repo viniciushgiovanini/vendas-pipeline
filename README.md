@@ -22,11 +22,8 @@ Projeto para criação de um pipeline de dados (ETL).
 - Tabela Vendas
 
   - A coluna data_venda foi convertida para o tipo datetime.
-
   - Foi feita a verificação do id_cliente para garantir que o id existe na tabela Clientes. Criou-se uma nova coluna chamada id_cliente_orfao.
-
   - A coluna id_cliente_orfao marca o registro como órfão (True) caso o id_cliente não exista mais na tabela Clientes, e False caso o id_cliente exista.
-
   - A coluna valor foi tratada para garantir que os números estejam no tipo float. Foi feita a verificação caso o número seja negativo ou nulo, e criado um padrão de 2 casas decimais para o valor do produto.
 
 ### Como rodar o Projeto
@@ -67,6 +64,12 @@ DB_CONFIG = {
     'user': 'postgres',
     'password': 'sua_senha'
 }
+```
+
+- Rodar código etl.py
+
+```cmd
+python etl.py
 ```
 
 ## Linguagens de Desenvolvimento
